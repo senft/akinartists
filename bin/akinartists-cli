@@ -1,0 +1,13 @@
+#!/usr/bin/env python2
+# encoding: utf-8
+
+import sys
+import os
+
+parent = os.path.join(os.path.dirname(__file__), os.pardir)
+if os.path.isdir(os.path.join(parent, 'akinartists')):
+    sys.path.insert(0, os.path.abspath(parent))
+
+from akinartists import cli
+
+cli.main()
